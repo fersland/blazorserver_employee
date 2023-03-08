@@ -1,0 +1,51 @@
+﻿
+@page "/departments"
+@using EmployeeManagement.Shared
+<h3>Department Page</h3>
+<h4>Welcome</h4>
+
+@code {
+    private string searchString = "";
+    private Department department = new Department();
+    private List<Department> departments = new List<Department>();
+
+    protected override async Task OnInitializedAsync(){
+        departments = departmentService.GetAll();
+    }
+
+    private bool Search(Department department){
+        if(string.IsNullOrWhiteSpace(searchString)) return true;
+        if (department.DepartmentName.Contains(searchString, StringComparison.OrdinalIgnoreCase)){
+            return true;
+        }
+
+        return false;
+    }
+
+    private List<Department> GetAll() {
+        departments = departmentService.GetAll();
+        return departments;
+    }
+
+    private void Add() {
+        if (department.DepartmentId == 0){
+            departmentService.Add(department);
+        }
+        else{
+            departmentService.Update(department);
+        }
+
+        department = new Department();
+        GetAll();
+    }
+
+    private void Update(Department record){
+        department = record;
+        StateHasChanged();
+    }
+
+    private async Task Delete(Department record){
+        departmentService.Delete(record);
+        GetAll();
+    }
+}
