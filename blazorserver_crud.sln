@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blazorserver_crud", "blazorserver_crud\blazorserver_crud.csproj", "{E18C1F66-79BA-4015-B791-7DF23B41B3B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement.Shared", "EmployeeManagement.Shared\EmployeeManagement.Shared.csproj", "{E872B616-8848-4F4B-BB1C-7694A3E5A57A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E18C1F66-79BA-4015-B791-7DF23B41B3B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E18C1F66-79BA-4015-B791-7DF23B41B3B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E18C1F66-79BA-4015-B791-7DF23B41B3B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E872B616-8848-4F4B-BB1C-7694A3E5A57A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E872B616-8848-4F4B-BB1C-7694A3E5A57A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E872B616-8848-4F4B-BB1C-7694A3E5A57A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E872B616-8848-4F4B-BB1C-7694A3E5A57A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
