@@ -1,8 +1,23 @@
-﻿
-@page "/departments"
+﻿@page "/departments"
+@using System
+@using System.Linq
 @using EmployeeManagement.Shared
+
 <h3>Department Page</h3>
 <h4>Welcome</h4>
+
+<MudCard Elevation="25">
+    <MudCardHeader>
+        <CardHeaderContent>
+            <MudText Type="Typo.h6">Departments</MudText>
+        </CardHeaderContent>
+    </MudCardHeader>
+    <MudCardContent>
+        <EditForm OnInvalidSubmit="Add" Model="@department">
+            <MudTextField @bind-Value="department.DepartmentName" Label="Name of Department"></MudTextField>
+        </EditForm>
+    </MudCardContent>
+</MudCard>
 
 @code {
     private string searchString = "";
